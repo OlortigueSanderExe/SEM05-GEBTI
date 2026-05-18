@@ -1,0 +1,158 @@
+:root {
+    --health-blue: #0f4c81;       /* Azul institucional sobrio */
+    --health-accent: #0284c7;     /* Celeste para destaques */
+    --health-dark: #1e293b;       /* Gris oscuro para textos legibles */
+    --health-bg-light: #f8fafc;   /* Fondo limpio */
+    --alert-red: #dc2626;         /* Rojo preventivo para alertas */
+}
+
+/* --- Reseteos y Base --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--health-dark);
+    background-color: #fff;
+    margin: 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Header --- */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+.brand-logos {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.brand-logos img { height: 45px; width: auto; }
+.brand-logos .divider { color: #cbd5e1; font-size: 24px; }
+
+.header-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.header-info a {
+    color: #475569;
+    text-decoration: none;
+    font-size: 14px;
+}
+.header-socials a {
+    color: var(--health-blue);
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+/* --- Menú de Navegación --- */
+.health-nav {
+    background-color: var(--health-blue);
+}
+.menu-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu-links a {
+    display: block;
+    padding: 16px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: background 0.2s;
+}
+.menu-links a:hover, .menu-links a.active {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* --- Banner de Alerta Sanitaria --- */
+.alert-banner {
+    background-color: #fef2f2;
+    border-bottom: 2px solid #fee2e2;
+    padding: 12px 0;
+}
+.alert-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.badge-alert {
+    background-color: var(--alert-red);
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.alert-content p { margin: 0; flex: 1; font-size: 14px; }
+.btn-alert {
+    color: var(--alert-red);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* --- Sección Hero (Dos Columnas Asimétricas) --- */
+.health-hero {
+    background: linear-gradient(180deg, #f0f7ff 0%, #fff 100%);
+    padding: 60px 0;
+}
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2s 0.8fr; /* Divide el espacio de forma asimétrica */
+    grid-template-columns: 7fr 5fr;
+    gap: 50px;
+    align-items: center;
+}
+.hero-info-text h1 {
+    font-size: 2.8rem;
+    color: var(--health-blue);
+    line-height: 1.2;
+    margin-top: 0;
+}
+.hero-info-text h1 span { color: var(--health-accent); }
+.hero-info-text p { font-size: 1.1rem; line-height: 1.6; color: #475569; margin-bottom: 35px; }
+
+.hero-cta-group { display: flex; gap: 15px; }
+.btn-main, .btn-sub {
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.2s;
+}
+.btn-main { background-color: var(--health-accent); color: #fff; }
+.btn-main:hover { background-color: #026ca3; }
+.btn-sub { background-color: #fff; color: var(--health-blue); border: 1px solid #cbd5e1; }
+.btn-sub:hover { background-color: #f1f5f9; }
+
+/* Tarjeta Destacada (Reemplaza la saturación del banner original) */
+.hero-featured-card {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(15, 76, 129, 0.08);
+    border-left: 5px solid var(--health-blue);
+}
+.card-tag {
+    color: var(--health-accent);
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+.hero-featured-card h3 { margin: 0 0 15px 0; font-size: 22px; color: var(--health-blue); }
+.hero-featured-card p { font-size: 15px; line-height: 1.5; color: #64748b; margin-bottom: 25px; }
+.card-link { color: var(--health-blue); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+.card-link:hover { color: var(--health-accent); }
